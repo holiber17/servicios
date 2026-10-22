@@ -14,3 +14,17 @@ document.querySelectorAll(".svc button").forEach(b => b.addEventListener("click"
   const o = b.getAttribute("aria-expanded") === "true";
   b.setAttribute("aria-expanded", !o);
 }));
+
+// Testimonios: agrega aquí solo opiniones reales de clientes. Mientras la lista esté vacía, la sección no se muestra.
+// Ejemplo: { texto: "Frase del cliente.", nombre: "Nombre", negocio: "Nombre del negocio" }
+const TESTIMONIOS = [];
+const op = document.getElementById("opiniones"), lista = document.getElementById("lista-opiniones");
+if (op && lista && TESTIMONIOS.length) {
+  TESTIMONIOS.forEach(t => {
+    const f = document.createElement("figure");
+    const q = document.createElement("blockquote"); q.textContent = t.texto;
+    const c = document.createElement("figcaption"); c.textContent = `${t.nombre} · ${t.negocio}`;
+    f.append(q, c); lista.append(f);
+  });
+  op.hidden = false;
+}
