@@ -97,7 +97,9 @@ summary{font:700 1.2rem var(--d);cursor:pointer}details p{margin-top:10px;color:
 form{display:grid;gap:16px}
 label{display:grid;gap:6px;font-size:.9rem;color:var(--mut);font-weight:500}
 input,select,textarea{font:inherit;color:var(--tx);padding:14px;background:#ffffff0a;border:1px solid #ffffff2a;border-radius:12px}
-select option{color:#000}
+input,select,textarea{width:100%;line-height:1.4}
+select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:44px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath d='M1 1l6 6 6-6' fill='none' stroke='%23a8f0ff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+select option{color:#000;background:#fff}
 button.btn{justify-self:start}
 footer{padding:36px 0 90px;color:var(--mut);font-size:.9rem}
 .fab{position:fixed;right:16px;bottom:16px;z-index:8;padding:13px 22px;border-radius:99px;background:linear-gradient(135deg,#5b7dff,#7aa2ff);color:#050816;font-weight:700;text-decoration:none;box-shadow:0 10px 40px #5b7dff88;transition:transform .3s,opacity .3s}
